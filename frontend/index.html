@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackBridge – Student Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>🎓 StackBridge</h1>
+            <p>Student Management System</p>
+        </header>
+
+        <main class="container">
+            <!-- Add Student Form -->
+            <section class="card form-card">
+                <h2>Add New Student</h2>
+                <form id="student-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="e.g. Rahul Kumar" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g. rahul@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="e.g. 21" min="16" max="100" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">➕ Add Student</button>
+                </form>
+                <div id="form-message" class="message hidden"></div>
+            </section>
+
+            <!-- Student List -->
+            <section class="card list-card">
+                <div class="list-header">
+                    <h2>Student Directory</h2>
+                    <button id="refresh-btn" class="btn btn-secondary">🔄 Refresh</button>
+                </div>
+                <div id="student-list" class="student-list">
+                    <p class="empty-state">Click "Refresh" to load students...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Built with ❤️ using FastAPI + TypeScript | Workshop Project</p>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
